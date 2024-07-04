@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= product.name %> - Online Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1><%= product.name %></h1>
+    <p>Price: <%= product.price %></p>
+    <p>Description: <%= product.description %></p>
+    <a href="/">Back to Home</a>
+    <a href="/<%= product._id %>/edit">Edit</a>
+    <form action="/<%= product._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
